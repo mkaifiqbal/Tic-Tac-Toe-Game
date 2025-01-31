@@ -21,6 +21,8 @@ const resetGame=()=>{
     turnO=true;
     enableBoxes();
     msgContainer.classList.add("hide");
+    document.querySelector("main").classList.remove("hide");
+
 }
 boxes.forEach((box)=> {
     box.addEventListener("click", ()=> {
@@ -53,6 +55,7 @@ const enableBoxes=()=>{
 const showWinner= (winner)=>{
     msg.innerText= `Congratulation, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
+    document.querySelector("main").classList.add("hide");
     disableBoxes();
 }
 
